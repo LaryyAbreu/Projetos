@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html Lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device">
+        <title>Feliz Páscoa!</title>
+    </head>
+
+    <style>
+    
+        body{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3J8cxpOdh4P0Br_zTBcodgO_SYxNN07WTyw&usqp=CAU");
+            background-repeat: no-repeat;
+            background-size: cover;    
+            }
+    
+        .painel{
+            margin: auto;
+            background-color: #fff;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            }
+
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 10px;
+            margin-left: -50px;
+            }
+
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border-radius: 2px solid #fff;
+            color: #fff;
+            border-radius: 10px;
+            margin-left: 10px;
+            }
+    </style>
+
+        <div class="painel">
+            <h1> Feliz Páscoa!</h1>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlKrf6SC9jKClZm9JFCUBypvhW3FbGI-0cw&usqp=CAU">
+            <h2>Você quer chocolates?</h2>
+            <button onmouseover="fuja()" id="nao">Sim</button>
+            <button id="sim">Não</button>
+        </div>
+
+        <script>
+
+            function fuja(){
+                var botaoNao = document.getElementById("nao");
+                var larguraJanela = window.innerWidth;
+                var alturaJanela = window.innerHeight;
+                var maxX = larguraJanela - botaoNao.offsetWidth;
+                var maxY = alturaJanela - botaoNao.offsetHeight;
+                
+                var aleatorioX = Math.floor(Math.random() * maxX);
+                var aleatorioY = Math.floor(Math.random() * maxY);
+
+                botaoNao.style.left = aleatorioX + "px";
+                botaoNao.style.top = aleatorioY + "px";
+            }
+        </script>
+
+        <tr>
+            <h5>Todos os direitos reservados.</h5>
+            <!--Desenvolvido por Larissa Estela de Abreu.-->
+        </tr>
+        </body>
+</html>
